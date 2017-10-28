@@ -1,0 +1,95 @@
+Create(POST):
+
+http://localhost:8080/intellect/api/user
+
+Request body:
+
+{
+	"id":"abc123",
+	"fName":"ragh",
+	"lName":"ravi",
+	"email":"rragh@gmail.com",
+	"pinCode":123,
+	"birthDate":"1990-03-03"
+}
+
+Response:
+
+{"timestamp":null,"status":200,"error":null,"message":"User Created Successfully","path":null,"userBean":{"id":"abc123","fName":"ragh","lName":"ravi","email":"rragh@gmail.com","pinCode":123,"birthDate":"03-03-1990","isActive":true}}
+
+get one user by ID: 
+
+http://localhost:8080/intellect/api/user/abc123
+
+Response:
+
+{"timestamp":null,"status":200,"error":null,"message":"User Details Fetched Successfully","path":null,"userBean":[{"id":"abc123","fName":"ragh","lName":"ravi","email":"rragh@gmail.com","pinCode":123,"birthDate":"03-03-1990","isActive":true}]}
+
+Update(PUT):
+
+
+http://localhost:8080/intellect/api/user/abc123
+
+{
+    "timestamp": null,
+    "status": 200,
+    "error": null,
+    "message": "User Updated Successfully",
+    "path": null,
+    "userBean": {
+        "id": "abc123",
+        "fName": "ragh",
+        "lName": "ravi",
+        "email": "rragh@gmail.com",
+        "pinCode": 123,
+        "birthDate": "03-03-1993",
+        "isActive": true
+    }
+}
+
+get All users:
+
+http://localhost:8080/intellect/api/user
+
+{
+    "timestamp": null,
+    "status": 200,
+    "error": null,
+    "message": "User Details Fetched Successfully",
+    "path": null,
+    "userBean": [
+        {
+            "id": "abc123",
+            "fName": "ragh",
+            "lName": "ravi",
+            "email": "rragh@gmail.com",
+            "pinCode": 123,
+            "birthDate": "03-03-1993",
+            "isActive": true
+        },
+        {
+            "id": "xyz123",
+            "fName": "ragh",
+            "lName": "ravi",
+            "email": "rraghxyz@gmail.com",
+            "pinCode": 123,
+            "birthDate": "03-03-1990",
+            "isActive": true
+        }
+    ]
+}
+
+
+Delete(abc123):
+
+http://localhost:8080/intellect/api/user/abc123
+
+{
+    "timestamp": null,
+    "status": 200,
+    "error": null,
+    "message": "User Deleted Successfully",
+    "path": null,
+    "userBean": null
+}
+
